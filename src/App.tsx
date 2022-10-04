@@ -6,7 +6,14 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <div>
+          <img src={logo} className="App-logo" alt="logo" />
+          <img
+            src="https://vitejs.dev/logo-with-shadow.png"
+            className="App-logo"
+            alt="logo"
+          />
+        </div>
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
@@ -18,6 +25,18 @@ function App() {
         >
           Learn React
         </a>
+        <span>
+          ⚡️
+          <a
+            className="App-link"
+            href={process.env.REACT_APP_VITE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Use Vite
+          </a>
+          ⚡️
+        </span>
       </header>
     </div>
   );

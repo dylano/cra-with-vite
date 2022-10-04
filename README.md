@@ -1,14 +1,31 @@
-# Getting Started with Create React App
+# Create React App, with Vite
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is bootstrapped with Create React App v5, with a couple of minor changes to allow the use of Vite for the local development server.
+
+The Vite configuration supports usage of `process.env` and environment variables prefixed with `REACT_APP_`, so both vite and create-react-app servers can be used on the same underlying codebase.
+
+Note that there are two `index.html` files in the project:
+
+- `/index.html` - this is a stripped down file which is used only by the Vite server
+- `/public/index.html` - this is the standard file used by the CRA server and is the page which will be included in the production build
+
+Other aspects of the project are the same as standard CRA. Jest is used for testing, and Babel/Webpack for production bundling (though you can easily run `npx vite build` to generate a Rollup-bundled version of the app -- the Vite build will be found in the `/dist` folder).
 
 ## Available Scripts
 
 In the project directory, you can run:
 
+### `yarn dev`
+
+Runs the app in the development mode, using `vite` as the local server\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the browser window (via vite-eslint-plugin).
+
 ### `yarn start`
 
-Runs the app in the development mode.\
+Runs the app in the development mode, using the standard dev server provided with `create-react-app`.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
@@ -42,5 +59,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+Learn about Vite in the [Getting Started Guide](https://vitejs.dev/guide/).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
