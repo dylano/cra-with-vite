@@ -1,5 +1,9 @@
 # Create React App, with Vite
 
+<div>
+<img src="public/cra+vite.png" alt="Screenshot" width=750/>
+</div>
+
 This project is bootstrapped with Create React App v5, with a couple of minor changes to allow the use of Vite for the local development server.
 
 The Vite configuration supports usage of `process.env` and environment variables prefixed with `REACT_APP_`, so both vite and create-react-app servers can be used on the same underlying codebase.
